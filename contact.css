@@ -1,0 +1,267 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:  rgb(20, 20, 20);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container{
+    width: 85%;
+    height: 100vh;
+}
+.header{
+    width: 100%;
+    height: 4rem;
+    background-color: rgb(63, 63, 63);
+    padding-left: 6.5%;
+    display: flex;
+    align-items: center;
+}
+.header h1{
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    word-spacing: 0.1rem;
+    font-weight: 800;
+    font-size: 2rem;
+}
+.header span{
+    color: rgb(250, 64, 250);
+}
+.hero{
+    padding-top: 10%;
+    color: white;
+}
+.hero h2{
+    font-size: 1.4rem;
+}
+.hero p{
+    margin-top: 5%;
+    width: 100%;
+}
+.mail-container, .call-container{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 8%;
+}
+.mail-container img{
+    height: 1.9rem;
+}
+.message{
+    display: flex;
+    flex-direction: column;
+}
+.call{
+    width: 2rem;
+    height: 2.5rem;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(250, 64, 250);
+}
+.socials{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10%;
+    gap: 1rem;
+}
+.facebook, .linkedin, .x{
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: rgb(63, 63, 63);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.facebook:hover, .linkedin:hover, .x:hover{
+    background-color: rgb(250, 64, 250);
+}
+.input-message{
+    margin-top: 10%;
+}
+.input-message input{
+    width: 100%;
+    height: 3.3rem;
+    border-radius: 25px;
+    background-color: rgb(63, 63, 63);
+    outline: 0;
+    border: 0;
+    margin-top: 8%;
+}
+.input-message input:focus, #message:focus{
+    color: white;
+    border: 1px solid rgb(250, 64, 250);
+    font-size: 1.1rem;
+}
+.input-message input::placeholder, #message::placeholder{
+    padding-left: 8%;
+    font-size: 1rem;
+    font-weight: 500;
+}
+#message{
+    width: 100%;
+    height: 10rem;
+    border-radius: 20px;
+    background-color: rgb(63, 63, 63);
+    outline: 0;
+    border: 0;
+    margin-top: 13%;
+}
+.message-button{
+    margin-top: 8%;
+}
+.message-button button{
+    width: 13rem;
+    height: 3.5rem;
+    border-radius: 30px;
+    background-color: transparent;
+    border: 1px solid rgb(250, 64, 250);
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    position: relative;
+}
+.message-button img{
+    height: 2.5rem;
+    width: 1.3rem;
+    position: absolute;
+    top: 2%;
+    right: 5%;
+    padding-top: 5%;
+}
+.message-button button:hover{
+    background-color: rgb(250, 64, 250);
+}
+.marquee-container{
+    width: 100%;
+    height: 7rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    position: relative;
+}
+marquee{
+    width: 100%;
+    position: absolute;
+    font-weight: 700;
+    color: rgb(63, 63, 63);
+    font-size: 6rem;
+    opacity: 0.5;
+}
+.overlap{
+    position: absolute;
+    top: 59%; 
+    left: 25%; 
+    transform: translateY(-50%); 
+    font-size: 3rem; 
+    padding: 5px; 
+    z-index: 1;
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    word-spacing: 0.1rem;
+    font-weight: 800;
+}
+.overlap span{
+    color: rgb(250, 64, 250);
+}
+.marquee-container{
+    display: none;
+}
+.home-button, .about-button, .portfolio-button, .contact-button{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgb(75, 74, 74);
+}
+.home-button:hover, .about-button:hover, .portfolio-button:hover, .contact-button:hover{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 30px;
+    background-color: rgb(250, 64, 250);
+}
+.about-button, .portfolio-button, .contact-button{
+    margin-top: 1.5rem;
+}
+.hover-text{
+    display: none;
+}
+.home-button:hover .hover-text, .about-button:hover .hover-text, .portfolio-button:hover .hover-text, .contact-button:hover .hover-text{
+    display: block;
+    color: white;
+    margin-right: 0.7rem;
+    font-weight: 700;
+}
+.page-links{
+    display: none;
+    padding-top: 14%;
+}
+.page-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+@media (min-width: 576px){
+    .header{
+        display: none;
+    }
+    .marquee-container{
+        display: block;
+    }
+}
+@media (min-width: 770px){
+    .input1{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    .input-message input{
+        width: 30%;
+    }
+}
+
+@media (min-width: 992px){
+    .hero{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        align-items: center;
+        gap: 10%;
+        margin:0;
+    }
+    .hero-left{
+        width: 30%;
+        height: 25rem;
+    }
+    .hero-middle{
+        height: 25rem;
+    }
+    .input-message{
+        margin: 0;
+    }
+    .input-message input{
+        margin: 0;
+    }
+    .container{
+        width: 90%;
+    }
+    .page-links{
+        display: block;
+    }
+    .marquee-container{
+        height: 4rem;
+    }
+    .overlap{
+        bottom: 50%;
+        left: 35%;
+    }    
+}

@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(20, 20, 20);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
+}
+.header{
+    width: 100%;
+    height: 4rem;
+    background-color: rgb(63, 63, 63);
+    padding-left: 6.5%;
+    display: flex;
+    align-items: center;
+}
+.header h1{
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    word-spacing: 0.1rem;
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+.header span{
+    color: rgb(250, 64, 250);
+}
+.container{
+    width: 90%;
+    height: 100vh;
+}
+.grid-container{
+    display: grid;
+    grid-template-columns:1fr;
+    gap: 1rem;
+    padding: 0.3rem;
+    margin-top: 8%;
+}
+.grid-items{
+    background-color: rgb(250, 64, 250);
+    gap: 0.5rem;
+    height: 10rem;
+    border-radius: 10px;
+}
+.marquee-container{
+    width: 100%;
+    height: 7rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    position: relative;
+}
+marquee{
+    width: 100%;
+    position: absolute;
+    font-weight: 700;
+    color: rgb(63, 63, 63);
+    font-size: 6rem;
+    opacity: 0.5;
+}
+.overlap{
+    position: absolute;
+    top: 59%; 
+    left: 25%; 
+    transform: translateY(-50%); 
+    font-size: 3rem; 
+    padding: 5px; 
+    z-index: 1;
+    color: white;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    word-spacing: 1rem;
+    font-weight: 800;
+}
+.overlap span{
+    color: rgb(250, 64, 250);
+}
+.marquee-container{
+    display: none;
+}
+.home-button, .about-button, .portfolio-button, .contact-button{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgb(75, 74, 74);
+}
+.home-button:hover, .about-button:hover, .portfolio-button:hover, .contact-button:hover{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 30px;
+    background-color: rgb(250, 64, 250);
+}
+.about-button, .portfolio-button, .contact-button{
+    margin-top: 1.5rem;
+}
+.hover-text{
+    display: none;
+}
+.home-button:hover .hover-text, .about-button:hover .hover-text, .portfolio-button:hover .hover-text, .contact-button:hover .hover-text{
+    display: block;
+    color: white;
+    margin-right: 0.7rem;
+    font-weight: 700;
+}
+.page-links{
+    display: none;
+    padding-top: 14%;
+}
+.page-links a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+@media (min-width:458px){
+    .grid-items{
+        height: 14rem;
+    }
+}
+@media (min-width: 576px){
+    .grid-container{
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0;
+    }
+    .header{
+        display: none;
+    }
+    .marquee-container{
+        display: grid;
+    }
+}
+@media (min-width:950px){
+    .overlap{
+        left: 35%;
+    }
+    .page-links{
+        display: grid;
+    }
+    .hero-left{
+        width: 85%;
+    }
+    .hero-right{
+        width: 15%;
+    }
+    .container{
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+    }
+}
+@media (min-width: 992px){
+    .grid-container{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

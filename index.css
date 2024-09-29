@@ -1,0 +1,131 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(31, 30, 30) ;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container{
+    width: 90%;
+    height: 100vh;
+}
+.page-links{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+.page-links a{
+    color: white;
+}
+.about{
+    display: flex;
+}
+.about-me{
+    padding-top: 10%; 
+    width: 100%;
+}
+.about-me h1{
+    color: rgb(250, 64, 250);
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.about-me h2{
+    color: white;
+    font-size: 1.5rem;
+}
+.about-me p{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 1.3;
+    word-spacing: 0.1rem;
+}
+.about-button button{
+    color: white;
+    background-color: transparent;
+    border: 1px solid rgb(250, 64, 250);
+    font-size: 1rem;
+    padding: 1rem 1.5rem;
+    border-radius: 30px;
+    word-spacing: 0.1rem;
+    display: inline-block;
+}
+.about-me button:hover{
+    background-color: rgb(250, 64, 250);
+}
+.about-button img{
+    height: 1.2rem;
+    width: 1.2rem;
+}
+.home-button, .about-page, .portfolio-button, .contact-button{
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: rgb(75, 74, 74);
+}
+.home-button:hover, .about-page:hover, .portfolio-button:hover, .contact-button:hover{
+    width: 10rem;
+    height: 3rem;
+    border-radius: 30px;
+    background-color: rgb(250, 64, 250);
+}
+.about-page, .portfolio-button, .contact-button{
+    margin-top: 1.5rem;
+}
+.hover-text{
+    display: none;
+}
+.home-button:hover .hover-text, .about-page:hover .hover-text, .portfolio-button:hover .hover-text, .contact-button:hover .hover-text{
+    display: block;
+    color: white;
+    margin-right: 0.7rem;
+    font-weight: 700;
+}
+.page-links2{
+    display: none;
+    padding-top: 14%;
+}
+.page-links2 a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+@media (min-width: 580px) and (max-width:992px){
+    .about-me{
+        text-align: center;
+    }
+    .about-me h1, .about-me h2{
+        font-size: 2rem;
+    }
+    
+}
+@media (min-width: 993px){
+    .about-me{
+        text-align: right;
+        width: 80%;
+    }
+    .page-links{
+        display: none;
+    }
+    .page-links2{
+        display: block;
+    }
+    .about{
+        gap: 15%;
+    }
+    .about-me h1, .about-me h2{
+        font-size: 3rem;
+    }
+    .about-me p{
+        font-size: 1.5rem;
+    }
+
+}
